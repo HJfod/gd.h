@@ -16,3 +16,6 @@ Windows headers for Geometry Dash. Originally copied from pie's textureldr.
 
  * If you'd like to contribute, create a pull request.
 
+# IMPORTANT
+  * Is required cocos headers because capuccino sdk are very outdate. IMPORTANT
+  * Read this
