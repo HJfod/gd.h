@@ -63,7 +63,7 @@ namespace gd {
 			reinterpret_cast<int(__stdcall*)(void*, bool*)>(addr)(this->m_pGlobalChannel, &ret);
 			return ret;
 		}
-		void playBackgroundMusic(std::string const& path, bool idk0, bool idk1) {
+		void playBackgroundMusic(std::string const& path, bool loop, bool randomLatency) {
 			reinterpret_cast<void(__thiscall*)(FMODAudioEngine*, bool, bool, std::string)>(
 				base + 0x23d80
 			)(this, idk0, idk1, path);
