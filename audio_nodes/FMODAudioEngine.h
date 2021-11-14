@@ -66,7 +66,7 @@ namespace gd {
 		void playBackgroundMusic(std::string const& path, bool loop, bool randomLatency) {
 			reinterpret_cast<void(__thiscall*)(FMODAudioEngine*, bool, bool, std::string)>(
 				base + 0x23d80
-			)(this, idk0, idk1, path);
+			)(this, loop, randomLatency, path);
 		}
 		bool isBackgroundMusicPlaying(const std::string& path) {
 			return path == m_sFilePath && isBackgroundMusicPlaying();
