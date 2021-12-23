@@ -16,3 +16,7 @@ Windows headers for Geometry Dash. Originally copied from pie's textureldr.
 
  * If you'd like to contribute, create a pull request.
 
+
+#  IMPORTANT
+
+* This only works with Visual Studio 2019. If you use Visual Studio Code or another IDE, please use [CMake](https://cmake.org/)
