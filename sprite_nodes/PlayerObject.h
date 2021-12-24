@@ -12,7 +12,7 @@ namespace gd {
 	class HardStreak;
 	class GhostTrailEffect;
 
-	class PlayerObject : public GameObject, public AnimatedSpriteDelegate {
+	class GDH_DLL PlayerObject : public GameObject, public AnimatedSpriteDelegate {
 	public:
 		PAD(24);
 		bool unk480;
@@ -44,7 +44,7 @@ namespace gd {
 		double m_xAccel; // 0x518
 		double m_jumpAccel; // 0x520
 		double m_gravity; // 0x528
-		PAD(8);
+		PAD(16);
 		bool unk538;
 		bool unk539;
 		bool unk53A;

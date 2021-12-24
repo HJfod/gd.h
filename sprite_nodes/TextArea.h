@@ -5,7 +5,7 @@
 
 namespace gd {
 	#pragma runtime_checks("s", off)
-	class TextArea : public cocos2d::CCSprite {
+	class GDH_DLL TextArea : public cocos2d::CCSprite {
 	protected:
 		PAD(0x58);
 
@@ -13,15 +13,11 @@ namespace gd {
 		static TextArea* create(const char* font, bool disableColor,
 			std::string caption, float scale, float width, float height,
 			cocos2d::CCPoint const& anchorPos) {
-			__asm {
-				movss xmm1, scale
-				movss xmm2, width
-				movss xmm3, height
-			}
-			auto pRet = reinterpret_cast<TextArea* (__fastcall*)(const char*,
+			auto pRet = reinterpret_cast<TextArea* (__vectorcall*)(const char*,
+				float, float, float, float,
 				bool, std::string, cocos2d::CCPoint)>(
 					base + 0x33270
-					)(font, disableColor, caption, anchorPos);
+				)(font, 0.f, scale, width, height, disableColor, caption, anchorPos);
 			__asm add esp, 0x20
 			return pRet;
 		}
